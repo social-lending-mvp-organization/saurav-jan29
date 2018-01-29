@@ -1,0 +1,20 @@
+{
+  "name": "jan29",
+  "version": "1.0.0",
+  "description": "Daily task for January 29 - create an API (GET method) that returns surname given the first name. Also create a form for the frontend to utilize this API.",
+  "main": "index.js",
+  "repository": "git@github.com:social-lending-mvp-organization/saurav-jan29.git",
+  "author": "Saurav Sahu <sauravsahu.12@live.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^4.16.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.6.1",
+    "jest": "^22.1.4"
+  },
+  "dependencies": {
+    "hapi": "^17.2.0"
+  }
+}
