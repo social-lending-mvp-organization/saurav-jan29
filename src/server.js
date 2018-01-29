@@ -1,34 +1,32 @@
 const Hapi = require('hapi');
 const db = require('./db');
 
-const server = new Hapi.Server();
-
-server.connection({ port: 8080, host: 'localhost' });
+const server = new Hapi.Server({
+  host: 'localhost',
+  port: 8080,
+});
 
 server.route({
   method: 'GET',
   path: '/api/lastname',
-  handler(request, reply) {
+  handler(request) {
     const inputName = request.query.firstName || '';
 
-    db.getLastName(inputName)
-      .then((lastName) => {
-        reply({
-          lastName,
-        });
-      })
-      .catch((reason) => {
-        reply({
-          reason,
-        });
-      });
+    return db.getLastName(inputName)
+      .then(lastName => ({ lastName }))
+      .catch(reason => ({ reason }));
   },
 });
 
-
-server.start((err) => {
-  if (err) {
-    throw err;
+async function start() {
+  try {
+    await server.start();
+  } catch (err) {
+    console.log(err);
+    process.exit(1);
   }
-  console.log(`Server running at: ${server.info.uri}`);
-});
+
+  console.log('Server running at:', server.info.uri);
+}
+
+start();
