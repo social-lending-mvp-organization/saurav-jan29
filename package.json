@@ -2,7 +2,7 @@
   "name": "jan29",
   "version": "1.0.0",
   "description": "Daily task for January 29 - create an API (GET method) that returns surname given the first name. Also create a form for the frontend to utilize this API.",
-  "main": "index.js",
+  "main": "src/server.js",
   "repository": "git@github.com:social-lending-mvp-organization/saurav-jan29.git",
   "author": "Saurav Sahu <sauravsahu.12@live.com>",
   "license": "MIT",
