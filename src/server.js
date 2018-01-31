@@ -4,7 +4,7 @@ const db = require('./db');
 
 const server = new Hapi.Server({
   host: 'localhost',
-  port: 8080,
+  port: process.env.PORT || 8080,
 });
 
 server.route({
