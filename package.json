@@ -6,6 +6,9 @@
   "repository": "git@github.com:social-lending-mvp-organization/saurav-jan29.git",
   "author": "Saurav Sahu <sauravsahu.12@live.com>",
   "license": "MIT",
+  "scripts": {
+    "start": "node src/server.js"
+  },
   "devDependencies": {
     "eslint": "^4.16.0",
     "eslint-config-airbnb-base": "^12.1.0",
