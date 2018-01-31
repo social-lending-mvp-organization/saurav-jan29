@@ -3,7 +3,7 @@ const inert = require('inert');
 const db = require('./db');
 
 const server = new Hapi.Server({
-  host: 'localhost',
+  host: '0.0.0.0',
   port: process.env.PORT || 8080,
 });
 
